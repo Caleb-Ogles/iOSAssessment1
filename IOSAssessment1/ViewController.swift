@@ -10,6 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Outlets & Actions
+    @IBOutlet weak var promptLabel: UILabel!
+    @IBOutlet weak var enterSomethingTextField: UITextField!
+    @IBOutlet weak var pressMeButton: UIButton!
+    
+    @IBAction func pressMeButtonTapped(_ sender: Any) {
+        textInput = enterSomethingTextField.text!
+        promptLabel.text = textInput
+        enterSomethingTextField.text = ""
+    }
+    
+    //Variables
+    var textInput = ""
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
